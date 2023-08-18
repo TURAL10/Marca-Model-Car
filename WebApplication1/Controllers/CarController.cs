@@ -55,7 +55,7 @@ namespace WebApplication1.Controllers
 				new () { Id = 42, CarName="LEXUS NX 350h", ModelId= 14 },
 				new () { Id = 43, CarName="LEXUS RX 350h", ModelId= 15 },
 				new () { Id = 44, CarName="LEXUS RX 400h", ModelId= 15 },
-				new () { Id = 45, CarName="LEXUS RX 450h", ModelId= 15 },
+				new () { Id = 45, CarName="LEXUS RX 450h", ModelId= 15 }
 			};
 		}
 
@@ -64,7 +64,7 @@ namespace WebApplication1.Controllers
 
 		public IActionResult Index(int? id)
 		{
-			if (id == null) return View(_cars);
+			if (id == 0) return View(_cars);
 			if (_cars.Exists(c => c.ModelId == id))
 			{
 				return View(_cars.FindAll(c => c.ModelId == id));

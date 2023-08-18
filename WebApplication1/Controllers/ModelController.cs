@@ -31,7 +31,7 @@ namespace WebApplication1.Controllers
 		}
 		public IActionResult Index(int? id)
 		{
-			if (id == null) return View(_models);
+			if (id == 0) return View(_models);
 			if (_models.Exists(x => x.MarkaId == id))
 			{
 				return View(_models.FindAll(x => x.MarkaId == id));

@@ -6,6 +6,8 @@
 <ul>
 	@foreach (Model modell in Model)
 	{
-			<li><a href="/car/index/@modell.Id">Id: @modell.Id   Name: @modell.ModelName    </a></li>
+			<li><a href="/car/index/@modell.Id">Id: @modell.Id   Model: @modell.ModelName    </a></li>
 	}	
 </ul>
+
+<h1><a href="/car/index/0">Show All Cars</a></h1>
