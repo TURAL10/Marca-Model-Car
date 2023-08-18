@@ -1,0 +1,11 @@
+﻿
+@model List<Model>
+@{
+	ViewData["Title"] = "Index";
+}
+<ul>
+	@foreach (Model modell in Model)
+	{
+			<li><a href="/car/index/@modell.Id">Id: @modell.Id   Name: @modell.ModelName    </a></li>
+	}	
+</ul>

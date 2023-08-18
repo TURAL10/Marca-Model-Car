@@ -1,0 +1,12 @@
+﻿@model List<Marka>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<ul>
+	@foreach (Marka marka in Model)
+	{
+		<li><a href="/model/index/@marka.Id">Id: @marka.Id  Marka: @marka.MarkaName</a></li>
+	}
+</ul>
